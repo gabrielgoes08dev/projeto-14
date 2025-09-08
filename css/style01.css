@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0e68dd;
+    padding: 20px;
+}
+
+.quadro {
+    max-width: 1090px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.quadro .cartao {
+    width: calc(33% - 20px);
+    background: #fff;
+    text-align: center;
+    padding: 15px 30px 30px 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.quadro .cartao .topo {
+    height: 130px;
+    padding: 12px 0 0 0;
+    clip-path: polygon(0 0, 100% 0, 100% 53%, 49% 100%, 0 53%);
+}
+
+.quadro .cartao .topo .titulo {
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.quadro .cartao .topo .preco {
+    margin-top: -10px;
+}
+
+.quadro .cartao .topo .preco .valor {
+    font-size: 45px;
+}
+
+.quadro .cartao .info {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.quadro .cartao .detalhes .plano {
+    margin-top: 25px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.quadro .cartao .detalhes .plano::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+    left: 0;
+    top: -12px;
+}
+
+.quadro .cartao .plano i {
+    color: #1aca03;
+}
+
+.quadro .cartao .plano i.fa-times {
+    color: red;
+}
+
+.quadro .cartao button {
+    outline: none;
+    border: none;
+    height: 42px;
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+.quadro .um .topo, .quadro .um button{
+    background: #04eccd;
+}
+.quadro .dois .topo, .quadro .dois button{
+    background: #0470ec;
+}
+.quadro .tres .topo, .quadro .tres button{
+    background: #db4040;
+}
+.quadro .cartao button:hover{
+    filter: brightness(90%);
+}
+@media (max-width:1000px){
+    .quadro .cartao{
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:715px){
+    .quadro .cartao{
+        width: 100%;
+    }
+}
